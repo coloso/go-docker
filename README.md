@@ -31,5 +31,12 @@ You should now see an output on the console that prints 'Hello World' every seco
 docker-go-app-1  | Hello World
 ```
 
+### Sync dependencies issue
+Goland IDE uses the systems Go SDK with mod dependencies and not that one in the Docker.
+So if you are using the gin or the fiber framework, you have to download it local too:
+```
+go mod tidy
+```
+
 ### Thanks a lot to
 https://github.com/cosmtrek/air
